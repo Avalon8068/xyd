@@ -1,30 +1,12 @@
 import * as React from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {View} from 'react-native';
+import {Button} from '@ant-design/react-native';
+import {Props} from 'types';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'transparent',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  scene: {
-    backgroundColor: '#F5FCFF',
-    shadowOpacity: 1,
-    shadowRadius: 3,
-  },
-  tabBarStyle: {
-    backgroundColor: '#eee',
-  },
-  tabBarSelectedItemStyle: {
-    backgroundColor: '#ddd',
-  },
-});
-
-export default function App() {
+export default function My(props: Props) {
   return (
     <View>
-      <Text>1111</Text>
+      <Button onPress={() => props.navigation.navigate('DeviceInfo')}>设备信息</Button>
     </View>
   );
 }

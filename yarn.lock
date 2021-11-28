@@ -1034,7 +1034,7 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@react-native-community/cameraroll@^4.1.2":
+"@react-native-community/cameraroll@4.1.2":
   version "4.1.2"
   resolved "https://registry.npmmirror.com/@react-native-community/cameraroll/download/@react-native-community/cameraroll-4.1.2.tgz#489c6bb6137571540d93c543d5fcf8c652b548ec"
   integrity sha1-SJxrthN1cVQNk8VD1fz4xlK1SOw=
@@ -1200,17 +1200,17 @@
   resolved "https://registry.nlark.com/@react-native-community/eslint-plugin/download/@react-native-community/eslint-plugin-1.1.0.tgz"
   integrity sha1-5Csb7xLSQVQRUZ/VKOZLWTsTY9w=
 
-"@react-native-community/segmented-control@^2.2.2":
+"@react-native-community/segmented-control@2.2.2":
   version "2.2.2"
   resolved "https://registry.nlark.com/@react-native-community/segmented-control/download/@react-native-community/segmented-control-2.2.2.tgz#4014256819ab8f40f6bc3a3929ff14a9d149cf04"
   integrity sha1-QBQlaBmrj0D2vDo5Kf8UqdFJzwQ=
 
-"@react-native-community/slider@^4.1.12":
+"@react-native-community/slider@4.1.12":
   version "4.1.12"
   resolved "https://registry.npmmirror.com/@react-native-community/slider/download/@react-native-community/slider-4.1.12.tgz#279ff7bbe487af92ad95ec758a029a54569e2a62"
   integrity sha512-CiuLZ2orueBiWHYxfaJF57jQY6HY2Q3z5pdAE4MKH8EqIImr/jgDJrJ/UxOVZHK1Ng9P+XlGIKfVIcuWZ6guuA==
 
-"@react-native-picker/picker@~1.9.10":
+"@react-native-picker/picker@1.9.13":
   version "1.9.13"
   resolved "https://registry.npmmirror.com/@react-native-picker/picker/download/@react-native-picker/picker-1.9.13.tgz#960da7fd3a538efe724b69b994e4f3bc4b7d9dcf"
   integrity sha1-lg2n/TpTjv5yS2m5lOTzvEt9nc8=
@@ -1230,7 +1230,7 @@
   resolved "https://registry.nlark.com/@react-native/polyfills/download/@react-native/polyfills-2.0.0.tgz"
   integrity sha1-TEC3RlXIOYLIz0dTDufcE9lXtqo=
 
-"@react-navigation/bottom-tabs@^6.0.9":
+"@react-navigation/bottom-tabs@6.0.9":
   version "6.0.9"
   resolved "https://registry.npmmirror.com/@react-navigation/bottom-tabs/download/@react-navigation/bottom-tabs-6.0.9.tgz#916b6a4b495ea8fdcace98dab727064876875d09"
   integrity sha1-kWtqS0leqP3KzpjatycGSHaHXQk=
@@ -1255,7 +1255,7 @@
   resolved "https://registry.npmmirror.com/@react-navigation/elements/download/@react-navigation/elements-1.2.1.tgz#86f19781c6f34a5c9dd25dca99915e0306f477d1"
   integrity sha1-hvGXgcbzSlyd0l3KmZFeAwb0d9E=
 
-"@react-navigation/native@^6.0.6":
+"@react-navigation/native@6.0.6":
   version "6.0.6"
   resolved "https://registry.npmmirror.com/@react-navigation/native/download/@react-navigation/native-6.0.6.tgz#0f2577358d73d7b21ff5b2455f0a2d51b1ad2837"
   integrity sha1-DyV3NY1z17If9bJFXwotUbGtKDc=
@@ -1271,7 +1271,7 @@
   dependencies:
     nanoid "^3.1.23"
 
-"@react-navigation/stack@^6.0.11":
+"@react-navigation/stack@6.0.11":
   version "6.0.11"
   resolved "https://registry.npmmirror.com/@react-navigation/stack/download/@react-navigation/stack-6.0.11.tgz#9a94089da7a6bb6b41084c2b9e88ef542d41345d"
   integrity sha1-mpQInaemu2tBCEwrnojvVC1BNF0=
@@ -1801,6 +1801,13 @@ atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.nlark.com/atob/download/atob-2.1.2.tgz"
   integrity sha1-bZUX654DDSQ2ZmZR6GvZ9vE1M8k=
+
+axios@0.24.0:
+  version "0.24.0"
+  resolved "https://registry.npmmirror.com/axios/download/axios-0.24.0.tgz?cache=0&sync_timestamp=1635214915083&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Faxios%2Fdownload%2Faxios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha1-gE5voeS5xSiFAd2d/1anoJQNINY=
+  dependencies:
+    follow-redirects "^1.14.4"
 
 babel-core@^7.0.0-bridge.0:
   version "7.0.0-bridge.0"
@@ -3167,6 +3174,11 @@ flow-parser@^0.121.0:
   resolved "https://registry.npmmirror.com/flow-parser/download/flow-parser-0.121.0.tgz?cache=0&sync_timestamp=1637341215309&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fflow-parser%2Fdownload%2Fflow-parser-0.121.0.tgz"
   integrity sha1-n5iY6uyRqffDI+npktgatcWOYY8=
 
+follow-redirects@^1.14.4:
+  version "1.14.5"
+  resolved "https://registry.npmmirror.com/follow-redirects/download/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
+  integrity sha1-8JpYSJgdPHcrU5Iwl3hSP42Fw4E=
+
 for-in@^1.0.2:
   version "1.0.2"
   resolved "https://registry.nlark.com/for-in/download/for-in-1.0.2.tgz"
@@ -4515,7 +4527,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.nlark.com/lodash.truncate/download/lodash.truncate-4.4.2.tgz"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.7.0:
+lodash@4.17.21, lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1622685830565&other_urls=https%3A%2F%2Fregistry.nlark.com%2Flodash%2Fdownload%2Flodash-4.17.21.tgz"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -5584,12 +5596,12 @@ react-native-collapsible@^1.6.0:
   resolved "https://registry.nlark.com/react-native-collapsible/download/react-native-collapsible-1.6.0.tgz#ca261ffff16914f872059bb0972e3a78c4b37f9c"
   integrity sha1-yiYf//FpFPhyBZuwly46eMSzf5w=
 
-react-native-device-info@^8.4.8:
+react-native-device-info@8.4.8:
   version "8.4.8"
   resolved "https://registry.npmmirror.com/react-native-device-info/download/react-native-device-info-8.4.8.tgz#fc92ae423e47db6cfbf30c30012e09cee63727fa"
   integrity sha512-92676ZWHZHsPM/EW1ulgb2MuVfjYfMWRTWMbLcrCsipkcMaZ9Traz5mpsnCS7KZpsOksnvUinzDIjsct2XGc6Q==
 
-react-native-gesture-handler@^1.10.3:
+react-native-gesture-handler@1.10.3:
   version "1.10.3"
   resolved "https://registry.nlark.com/react-native-gesture-handler/download/react-native-gesture-handler-1.10.3.tgz#942bbf2963bbf49fa79593600ee9d7b5dab3cfc0"
   integrity sha1-lCu/KWO79J+nlZNgDunXtdqzz8A=
@@ -5608,7 +5620,7 @@ react-native-modal-popover@^2.0.1:
     lodash "^4.17.21"
     prop-types "^15.7.2"
 
-react-native-pager-view@^5.4.9:
+react-native-pager-view@5.4.9:
   version "5.4.9"
   resolved "https://registry.npmmirror.com/react-native-pager-view/download/react-native-pager-view-5.4.9.tgz#c0d40847cfeda5a4e729b53271b0ee0fedff3eb5"
   integrity sha512-D6tzxpwMGdl6CXgtskGWhKRc5cJakCazESRGt7PkqnpyiH3N35ft1KmR82pCSQetAFlytFiToeu3a/dG5CELvA==
@@ -5618,7 +5630,7 @@ react-native-safe-area-context@3.3.2:
   resolved "https://registry.nlark.com/react-native-safe-area-context/download/react-native-safe-area-context-3.3.2.tgz#9549a2ce580f2374edb05e49d661258d1b8bcaed"
   integrity sha1-lUmizlgPI3TtsF5J1mEljRuLyu0=
 
-react-native-screens@^3.9.0:
+react-native-screens@3.9.0:
   version "3.9.0"
   resolved "https://registry.npmmirror.com/react-native-screens/download/react-native-screens-3.9.0.tgz#39b79f0e50b9d68ec822d333bc76e7aaee90f3fd"
   integrity sha1-ObefDlC51o7IItMzvHbnqu6Q8/0=

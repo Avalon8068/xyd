@@ -3,15 +3,17 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
 const Stack = createStackNavigator();
 import router from './router';
+import {Router} from 'types';
+import {Route} from '@react-navigation/routers';
+
 const StackNavigator = () => {
   //从子导航器获取路由名称
-  const getChildTitle = route => {
-    const routeName = getFocusedRouteNameFromRoute(route);
-    return routeName;
+  const getChildTitle = (route: Partial<Route<string>>) => {
+    return getFocusedRouteNameFromRoute(route);
   };
   return (
     <Stack.Navigator>
-      {router.map((item, index) => {
+      {router.map((item: Router, index: number) => {
         return (
           <Stack.Screen
             key={index}
@@ -19,6 +21,7 @@ const StackNavigator = () => {
             component={item.component}
             options={({route}) => ({
               title: getChildTitle(route) || item.title,
+              headerTitle: getChildTitle(route) || item.title,
               headerStyle: {
                 backgroundColor: '#fff',
                 height: 40,
@@ -27,7 +30,7 @@ const StackNavigator = () => {
                 color: '#000',
                 fontSize: 15,
               },
-              headerShown: item.headerShown,
+              headerShown: item.headerShown && item.headerShown,
             })}
           />
         );

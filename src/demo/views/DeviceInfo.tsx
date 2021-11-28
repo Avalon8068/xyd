@@ -14,14 +14,13 @@ function loadDeviceInfo(): Device {
   };
 }
 
-export default function DetailsScreen({navigation}) {
+export default function DeviceScreen() {
   const device = loadDeviceInfo();
 
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>DeviceInfo Screen</Text>
       <Text>{JSON.stringify(device)}</Text>
-      <Button title="Go to Details... again" onPress={() => navigation.push('Details')} />
     </View>
   );
 }

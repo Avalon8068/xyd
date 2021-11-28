@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, StyleSheet} from 'react-native';
 import Login from './Login';
-
+import {Props} from 'types';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -11,12 +11,11 @@ const styles = StyleSheet.create({
   },
 });
 
-class Launch extends React.Component {
+class Launch extends React.Component<Props> {
   render() {
     return (
       <View {...this.props} style={styles.container}>
-        <Text>Welcome2222</Text>
-        <Login />
+        <Login {...this.props} />
       </View>
     );
   }

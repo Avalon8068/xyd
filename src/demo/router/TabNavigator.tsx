@@ -2,16 +2,19 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 const Tab = createBottomTabNavigator();
 import {Image, StyleSheet} from 'react-native';
+import {Router} from 'types';
 
-const tabbar = [
+const tabbar: Router[] = [
   {
-    name: '首页',
+    name: 'home',
+    title: '首页',
     component: require('../views/Home').default,
     icon: require('../assets/img/1.png'),
     selectIcon: require('../assets/img/s1.png'),
   },
   {
-    name: '我的',
+    name: 'my',
+    title: '我的',
     component: require('../views/My').default,
     icon: require('../assets/img/2.png'),
     selectIcon: require('../assets/img/s2.png'),
@@ -20,10 +23,7 @@ const tabbar = [
 
 const TabNavigator = () => {
   return (
-    <Tab.Navigator
-      tabBarOptions={{
-        activeTintColor: '#2C3167',
-      }}>
+    <Tab.Navigator>
       {tabbar.map((item, index) => {
         return (
           <Tab.Screen
@@ -34,6 +34,8 @@ const TabNavigator = () => {
               tabBarIcon: ({focused}) => (
                 <Image source={focused ? item.selectIcon : item.icon} style={[styles.image]} />
               ),
+              title: item.title || item.name,
+              headerShown: item.headerShown && item.headerShown,
             }}
           />
         );
