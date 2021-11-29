@@ -5902,7 +5902,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.nlark.com/prop-types/download/prop-types-15.7.2.tgz"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -5971,6 +5971,13 @@ react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.npmmirror.com/react-is/download/react-is-16.13.1.tgz"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
+
+react-native-camera@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.nlark.com/react-native-camera/download/react-native-camera-4.2.1.tgz#caf74081f055e89d7e9b0cd5108965d808c60e90"
+  integrity sha1-yvdAgfBV6J1+mwzVEIll2AjGDpA=
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-codegen@^0.0.7:
   version "0.0.7"

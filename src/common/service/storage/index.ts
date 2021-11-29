@@ -1,7 +1,5 @@
 /**
  * 使用react-native-storage构建的本地存储的信息封装
- *
- *
  */
 import Storage from 'react-native-storage';
 import AsyncStorage from '@react-native-async-storage/async-storage';

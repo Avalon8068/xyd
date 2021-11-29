@@ -46,7 +46,8 @@ export default class extends React.Component<Props, any> {
 
   async login() {
     try {
-      let data = await post('/login', this.state.user);
+      let data = await post('/gw/bff-admin/login/lg', this.state.user);
+      console.log(data);
       if (data && data.token) {
         await storage.save({key: 'userName', data: this.state.user.username});
         await storage.save({key: 'token', data: data.token});

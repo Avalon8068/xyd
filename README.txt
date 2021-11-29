@@ -7,14 +7,6 @@ peer dependency:
 react-native-pager-view
 react-native-gesture-handler
 
-react-native-router-flux
-peer dependency:
-react-native-screens
-react-native-gesture-handler
-react-native-reanimated
-react-native-safe-area-context
-@react-native-community/masked-view
-
 @react-navigation/native
 peer dependency:
 react-native-screens
@@ -25,3 +17,10 @@ react-native-safe-area-context
 
 1.进入demo-server, 执行npm install后启动服务，执行npm start
 2.增加.env.local--》从.env复制，修改具体变量值，使用本地ip地址，不要使用localhost或127.0.0.1
+
+参考文档
+1.@react-navigation/native
+https://reactnavigation.org/docs/getting-started/
+2.ANT MOBILE RN
+https://rn.mobile.ant.design/docs/react/introduce-cn
+

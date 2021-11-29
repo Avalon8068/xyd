@@ -5,9 +5,8 @@
  * @type {{user: ((params))}}
  */
 const sync = {
+  // token 不需要获取直接返回null
+  token: async () => null,
+};
 
-	// token 不需要获取直接返回null
-	token: async () => null
-}
-
-export default sync
+export default sync;

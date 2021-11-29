@@ -1,3 +1,7 @@
+/**
+ * navigation 后台跳转服务，
+ * 处理非页面跳转的情况
+ */
 import {createNavigationContainerRef} from '@react-navigation/native';
 
 export const navigationRef = createNavigationContainerRef();

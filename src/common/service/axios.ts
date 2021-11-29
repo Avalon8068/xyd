@@ -11,9 +11,6 @@ import storage from 'common/service/storage';
 import {IDataObject} from 'types';
 import Config from 'react-native-config';
 
-//本地环境
-console.log(`API-HOST: ${Config.API_HOST}`);
-
 const baseURL = `${Config.API_HOST}`;
 
 // 不需要提示的API
@@ -45,7 +42,7 @@ const beforeSendRequest = async (config: AxiosRequestConfig) => {
     if (!config.headers) {
       config.headers = {};
     }
-    config.headers['Authorization'] = `Bearer ${token}`;
+    config.headers['x-access-token'] = `${token}`;
   }
   return config;
 };
@@ -59,7 +56,7 @@ const receiveResponseSuccess = (response: AxiosResponse) => {
 
   return new Promise((resolve, reject) => {
     if (httpCodes.indexOf(response.status) !== -1) {
-      if (response.data.code !== 10000) {
+      if (response.data.code !== '10000') {
         reject({
           data: {
             code: response.data.code,
