@@ -15,3 +15,9 @@ export type Router = {
  * 对Prop进行封装
  */
 export type Props = StackScreenProps<any>;
+
+export type GenericValue = string | object | number | boolean | undefined | null;
+
+export interface IDataObject {
+  [key: string]: GenericValue | IDataObject | GenericValue[] | IDataObject[];
+}
