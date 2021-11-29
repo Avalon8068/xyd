@@ -8,7 +8,12 @@
     "dev:start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "build:ios": "ENVFILE=.env.production react-native bundle --dev false --entry-file index.js --bundle-output ios/bundle/main.jsbundle --platform ios --assets-dest ./ios/bundle"
+    "build:ios:dev": "ENVFILE=.env.dev react-native bundle --dev false --entry-file index.js --bundle-output ios/bundle/main.jsbundle --platform ios --assets-dest ./ios/bundle",
+    "build:ios:qa": "ENVFILE=.env.qa react-native bundle --dev false --entry-file index.js --bundle-output ios/bundle/main.jsbundle --platform ios --assets-dest ./ios/bundle",
+    "build:ios:prod": "ENVFILE=.env.prod react-native bundle --dev false --entry-file index.js --bundle-output ios/bundle/main.jsbundle --platform ios --assets-dest ./ios/bundle",
+    "build:android:dev": "ENVFILE=.env.dev react-native run-android --no-packager --variant=devRelease --appIdSuffix=dev",
+    "build:android:qa": "ENVFILE=.env.qa react-native run-android --no-packager --variant=qaRelease --appIdSuffix=qa",
+    "build:android:prod": "ENVFILE=.env.prod react-native run-android --no-packager --variant=prodRelease"
   },
   "dependencies": {
     "@ant-design/icons-react-native": "2.3.2",

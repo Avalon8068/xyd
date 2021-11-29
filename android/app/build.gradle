@@ -131,11 +131,13 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
+        minSdkVersion 21
         applicationId "com.xydti"
-        minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
+         missingDimensionStrategy 'react-native-camera', 'general'
         versionCode 1
         versionName "1.0"
+        flavorDimensions "version"
     }
     splits {
         abi {
@@ -183,8 +185,32 @@ android {
                 output.versionCodeOverride =
                         defaultConfig.versionCode * 1000 + versionCodes.get(abi)
             }
+            if(variant.buildType.name.equals('release')){
+                def date = new Date().format("yyyyMMdd_HHmm" , TimeZone.getTimeZone("GMT+08"))
+                def fileName = "app_${variant.productFlavors[0].name}_${date}_${versionName}.apk"
+                output.outputFileName = fileName
+            }
 
         }
+    }
+
+    //add for build
+    productFlavors {
+            dev {
+                dimension "version"
+                applicationId 'com.xydti.dev'
+                resValue "string", "build_config_package", "com.xydti"
+            }
+            prod {
+                dimension "version"
+                applicationId 'com.xydti'
+                resValue "string", "build_config_package", "com.xydti"
+            }
+            qa {
+                dimension "version"
+                applicationId 'com.xydti.qa'
+                resValue "string", "build_config_package", "com.xydti"
+            }
     }
 }
 

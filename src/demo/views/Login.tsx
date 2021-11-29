@@ -4,6 +4,7 @@ import {Button, InputItem, Toast} from '@ant-design/react-native';
 import {Props} from 'types';
 import storage from 'common/service/storage';
 import {post} from 'common/service/axios';
+import Config from 'react-native-config';
 
 const styles = StyleSheet.create({
   container: {
@@ -47,6 +48,7 @@ export default class extends React.Component<Props, any> {
   async login() {
     try {
       let data = await post('/gw/bff-admin/login/lg', this.state.user);
+      console.log(`login in to: ${Config.API_HOST}`);
       console.log(data);
       if (data && data.token) {
         await storage.save({key: 'userName', data: this.state.user.username});

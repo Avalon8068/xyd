@@ -3,6 +3,17 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '11.0'
 
+ENVFILES = {
+  'Dev.Release' => '$(PODS_ROOT)/../../.env.dev',
+  'Qa.Release' => '$(PODS_ROOT)/../../.env.qa',
+  'Prod.Release' => '$(PODS_ROOT)/../../.env.prod',
+}
+
+project 'xydti',
+        'Dev.Release' => :release,
+        'Qa.Release' => :release,
+        'Prod.Release' => :release
+
 target 'xydti' do
   config = use_native_modules!
 
@@ -26,5 +37,12 @@ target 'xydti' do
   post_install do |installer|
     react_native_post_install(installer)
     __apply_Xcode_12_5_M1_post_install_workaround(installer)
+    installer.pods_project.targets.each do |target|
+      target.build_configurations.each do |config|
+        if target.name == 'react-native-config'
+          config.build_settings['ENVFILE'] = ENVFILES[config.name]
+        end
+      end
+    end
   end
 end
