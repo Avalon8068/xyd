@@ -13,6 +13,9 @@ react-native-screens
 react-native-safe-area-context
 
 
+
+
+
 添加axios库，demo-server 模拟登录请求，
 
 1.进入demo-server, 执行npm install后启动服务，执行npm start
@@ -23,4 +26,7 @@ react-native-safe-area-context
 https://reactnavigation.org/docs/getting-started/
 2.ANT MOBILE RN
 https://rn.mobile.ant.design/docs/react/introduce-cn
+3.expo-camera
+https://docs.expo.dev/versions/v43.0.0/sdk/camera
+
 

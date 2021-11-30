@@ -5,9 +5,6 @@ const Stack = createStackNavigator();
 import router from './router';
 import {Router} from 'types';
 import {Route} from '@react-navigation/routers';
-import {Button} from '@ant-design/react-native';
-import {navigate} from 'common/service/navigation';
-
 const StackNavigator = () => {
   //从子导航器获取路由名称
   const getChildTitle = (route: Partial<Route<string>>) => {
@@ -32,7 +29,6 @@ const StackNavigator = () => {
                 color: '#000',
                 fontSize: 15,
               },
-              headerRight: () => <Button size="small" type="ghost" onPress={() => navigate('CameraScreen')} />,
               headerShown: item.headerShown && item.headerShown,
             })}
           />

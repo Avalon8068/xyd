@@ -1,0 +1,4 @@
+1、皮肤细化定制，除了ANT Mobile Design RN 外，还需要定制其他组件的，比如Navigation的
+2、axios 错误定制，包含以下：没有网络提醒，token失效跳转
+3、storage 存储操作还要细化，value有效期等
+4、camera定制

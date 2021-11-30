@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "react-native start",
     "dev:android": "ENVFILE=.env.local react-native run-android --variant=localDebug --appIdSuffix=local",
     "dev:ios": "ENVFILE=.env.local react-native run-ios",
     "dev:start": "react-native start",
@@ -31,7 +32,7 @@
     "lodash": "4.17.21",
     "react": "17.0.2",
     "react-native": "0.66.3",
-    "react-native-camera": "^4.2.1",
+    "react-native-camera-kit": "11.2.1",
     "react-native-config": "^1.4.5",
     "react-native-device-info": "8.4.8",
     "react-native-gesture-handler": "1.10.3",
