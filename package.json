@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev:android": "ENVFILE=.env.local react-native run-android",
+    "dev:android": "ENVFILE=.env.local react-native run-android --variant=localDebug --appIdSuffix=local",
     "dev:ios": "ENVFILE=.env.local react-native run-ios",
     "dev:start": "react-native start",
     "test": "jest",

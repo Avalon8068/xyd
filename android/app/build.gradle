@@ -196,6 +196,11 @@ android {
 
     //add for build
     productFlavors {
+            local {
+                dimension "version"
+                applicationId 'com.xydti.local'
+                resValue "string", "build_config_package", "com.xydti"
+            }
             dev {
                 dimension "version"
                 applicationId 'com.xydti.dev'
