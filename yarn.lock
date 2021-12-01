@@ -4835,7 +4835,7 @@ lodash.truncate@^4.4.2:
   resolved "https://registry.nlark.com/lodash.truncate/download/lodash.truncate-4.4.2.tgz"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
 
-lodash@4.17.21, lodash@^4.14.2, lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.3.0, lodash@^4.7.0:
+lodash@4.17.21, lodash@^4.17.10, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@^4.3.0, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.nlark.com/lodash/download/lodash-4.17.21.tgz?cache=0&sync_timestamp=1622685830565&other_urls=https%3A%2F%2Fregistry.nlark.com%2Flodash%2Fdownload%2Flodash-4.17.21.tgz"
   integrity sha1-Z5WRxWTDv/quhFTPCz3zcMPWkRw=
@@ -5902,7 +5902,7 @@ prompts@^2.0.1, prompts@^2.4.0:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.nlark.com/prop-types/download/prop-types-15.7.2.tgz"
   integrity sha1-UsQedbjIfnK52TYOAga5ncv/psU=
@@ -5972,12 +5972,12 @@ react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.npmmirror.com/react-is/download/react-is-16.13.1.tgz"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
-react-native-camera-kit@11.2.1:
-  version "11.2.1"
-  resolved "https://registry.npmmirror.com/react-native-camera-kit/download/react-native-camera-kit-11.2.1.tgz#d1f4ba9f60a2412324616699b09882809d4edb43"
-  integrity sha1-0fS6n2CiQSMkYWaZsJiCgJ1O20M=
+react-native-camera@4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npmmirror.com/react-native-camera/download/react-native-camera-4.2.1.tgz#caf74081f055e89d7e9b0cd5108965d808c60e90"
+  integrity sha1-yvdAgfBV6J1+mwzVEIll2AjGDpA=
   dependencies:
-    lodash "^4.14.2"
+    prop-types "^15.6.2"
 
 react-native-codegen@^0.0.7:
   version "0.0.7"
@@ -6045,7 +6045,7 @@ react-native-screens@3.9.0:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
 
-react-native-storage@^1.0.1:
+react-native-storage@1.0.1:
   version "1.0.1"
   resolved "https://registry.nlark.com/react-native-storage/download/react-native-storage-1.0.1.tgz#2c493875ff76ec301987c951a8302f3a54381241"
   integrity sha1-LEk4df927DAZh8lRqDAvOlQ4EkE=

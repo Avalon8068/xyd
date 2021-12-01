@@ -7,17 +7,18 @@ export default function Home(props: Props) {
   return (
     <ScrollView>
       <Button onPress={() => props.navigation.navigate('AntForm')}>Antd Mobile RN - From</Button>
-      <List renderHeader="EX Camera">
+{/*      <List renderHeader="EX Camera">
         <Button onPress={() => props.navigation.navigate('BaseCamera_EX')}>EX Base Camera</Button>
         <Button onPress={() => props.navigation.navigate('FaceDetector_EX')}>EX Face Detector</Button>
         <Button onPress={() => props.navigation.navigate('BarcodeScan_EX')}>EX BarcodeScan</Button>
         <Button onPress={() => props.navigation.navigate('CameraScreenExample')}>CameraScreenExample</Button>
-      </List>
-{/*      <List renderHeader="RN Camera">
+      </List>*/}
+      <List renderHeader="RN Camera">
         <Button onPress={() => props.navigation.navigate('BaseCamera_RN')}>RN Base Camera</Button>
         <Button onPress={() => props.navigation.navigate('FaceDetector_RN')}>RN Face Detector</Button>
         <Button onPress={() => props.navigation.navigate('BarcodeScan_RN')}>RN BarcodeScan</Button>
-      </List>*/}
+      </List>
+      <Button onPress={() => props.navigation.navigate('AliFaceVerify')}>AliFaceVerify</Button>
     </ScrollView>
   );
 }

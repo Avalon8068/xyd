@@ -7,25 +7,12 @@ const router: Router[] = [
     component: require('../views/AntForm').default,
     headerShown: true,
   },
-  // {
-  //   name: 'BaseCamera_RN',
-  //   title: 'CameraScreen',
-  //   component: require('../views/rn/BaseCamera').default,
-  //   headerShown: true,
-  // },
-  // {
-  //   name: 'FaceDetector_RN',
-  //   title: 'FaceDetector',
-  //   component: require('../views/rn/FaceDetector').default,
-  //   headerShown: true,
-  // },
-  // {
-  //   name: 'BarcodeScan_RN',
-  //   title: 'BarcodeScan',
-  //   component: require('../views/rn/BarcodeScan').default,
-  //   headerShown: true,
-  // },
-
+  /*  {
+    name: 'FaceDetector_EX',
+    title: 'FaceDetector',
+    component: require('../views/ex/FaceDetector').default,
+    headerShown: true,
+  },
   {
     name: 'BaseCamera_EX',
     title: 'CameraScreen',
@@ -43,7 +30,38 @@ const router: Router[] = [
     title: 'BarcodeScan',
     component: require('../views/ex/BarcodeScan').default,
     headerShown: true,
+  },*/
+
+  {
+    name: 'BaseCamera_RN',
+    title: 'CameraScreen',
+    component: require('../views/rn/BaseCamera').default,
+    headerShown: true,
   },
+  {
+    name: 'FaceDetector_RN',
+    title: 'FaceDetector',
+    component: require('../views/rn/FaceDetector').default,
+    headerShown: true,
+  },
+  {
+    name: 'BarcodeScan_RN',
+    title: 'BarcodeScan',
+    component: require('../views/rn/BarcodeScan').default,
+    headerShown: true,
+  },
+  {
+    name: 'ScanResult',
+    title: 'ScanResult',
+    component: require('../views/rn/ScanResult').default,
+    headerShown: true,
+  },
+  /*  {
+    name: 'AliFaceVerify',
+    title: 'AliFaceVerify',
+    component: require('../views/AliFaceVerify').default,
+    headerShown: true,
+  },*/
 ];
 
 export default router;

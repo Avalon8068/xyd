@@ -1,6 +1,6 @@
 import React from 'react';
-import { View, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
-import { RNCamera } from 'react-native-camera';
+import {View, TouchableOpacity, StyleSheet, Dimensions} from 'react-native';
+import {RNCamera} from 'react-native-camera';
 import {Icon} from '@ant-design/react-native';
 
 const styles = StyleSheet.create({
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class PhotoCamera extends React.PureComponent {
+class PhotoCamera extends React.PureComponent<any> {
   state = {
     type: RNCamera.Constants.Type.back,
   };
@@ -46,13 +46,11 @@ class PhotoCamera extends React.PureComponent {
   flipCamera = () =>
     this.setState({
       type:
-        this.state.type === RNCamera.Constants.Type.back
-          ? RNCamera.Constants.Type.front
-          : RNCamera.Constants.Type.back,
+        this.state.type === RNCamera.Constants.Type.back ? RNCamera.Constants.Type.front : RNCamera.Constants.Type.back,
     });
 
   takePhoto = async () => {
-    const { onTakePhoto } = this.props;
+    const {onTakePhoto} = this.props;
     const options = {
       quality: 0.5,
       base64: true,
@@ -60,10 +58,12 @@ class PhotoCamera extends React.PureComponent {
       height: 300,
     };
     const data = await this.camera.takePictureAsync(options);
-    onTakePhoto(data.base64);
+    if (onTakePhoto) {
+      onTakePhoto(data.base64);
+    }
   };
   render() {
-    const { type } = this.state;
+    const {type} = this.state;
     return (
       <View style={styles.container}>
         <RNCamera

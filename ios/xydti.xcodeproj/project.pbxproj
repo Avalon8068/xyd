@@ -139,7 +139,6 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				E233CBF5F47BEE60B243DCF8 /* Pods */,
 				B255F32490AA42C18531D42F /* Resources */,
-				C1C6736E27552037004E9337 /* Resources-iPad */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -162,13 +161,6 @@
 				B2E15C7BF6C04BBE9070E787 /* antoutline.ttf */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		C1C6736E27552037004E9337 /* Resources-iPad */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Resources-iPad";
 			sourceTree = "<group>";
 		};
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {

@@ -134,7 +134,7 @@ android {
         minSdkVersion 21
         applicationId "com.xydti"
         targetSdkVersion rootProject.ext.targetSdkVersion
-         missingDimensionStrategy 'react-native-camera', 'general'
+        missingDimensionStrategy 'react-native-camera', 'mlkit'
         versionCode 1
         versionName "1.0"
         flavorDimensions "version"
