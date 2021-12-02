@@ -28,6 +28,12 @@ target 'xydti' do
     # Pods for testing
   end
 
+ # react_native > 0.60，会autolink，但是不会安装 subspecs, 手动定义，虽然会出现警告，但不影响使用
+ # 待找到更好的方式后再更新
+ pod 'react-native-camera', path: '../node_modules/react-native-camera', subspecs: [
+  'FaceDetectorMLKit',
+  'BarcodeDetectorMLKit'
+ ]
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and

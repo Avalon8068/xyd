@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions, Image, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {Dimensions, Image, StyleSheet, TouchableOpacity, View, Platform} from 'react-native';
 import {RNCamera} from 'react-native-camera';
 import {Icon} from '@ant-design/react-native';
 
@@ -12,6 +12,8 @@ export default class FaceDetector extends React.Component<any, any> {
       imageReady: false,
       type: RNCamera.Constants.Type.back,
     };
+    console.log(RNCamera.Constants.FaceDetection.Mode);
+    console.log(RNCamera.Constants.FaceDetection);
   }
 
   flipCamera = () =>
@@ -62,7 +64,7 @@ export default class FaceDetector extends React.Component<any, any> {
               buttonPositive: 'Ok',
               buttonNegative: 'Cancel',
             }}
-            faceDetectionMode="fast"
+            faceDetectionMode={RNCamera.Constants.FaceDetection.Mode.fast}
             onFaceDetectionError={() => {
               console.log('face detector error');
             }}

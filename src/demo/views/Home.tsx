@@ -18,7 +18,7 @@ export default function Home(props: Props) {
         <Button onPress={() => props.navigation.navigate('FaceDetector_RN')}>RN Face Detector</Button>
         <Button onPress={() => props.navigation.navigate('BarcodeScan_RN')}>RN BarcodeScan</Button>
       </List>
-      <Button onPress={() => props.navigation.navigate('AliFaceVerify')}>AliFaceVerify</Button>
+      {/*<Button onPress={() => props.navigation.navigate('AliFaceVerify')}>AliFaceVerify</Button>*/}
     </ScrollView>
   );
 }
