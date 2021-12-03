@@ -56,6 +56,30 @@ const router: Router[] = [
     component: require('../views/rn/ScanResult').default,
     headerShown: true,
   },
+  {
+    name: 'GeoTest',
+    title: 'GeoTest',
+    component: require('../views/geo/GeoTest').default,
+    headerShown: true,
+  },
+  {
+    name: 'TraceTest',
+    title: 'TraceTest',
+    component: require('../views/geo/TraceTest').default,
+    headerShown: true,
+  },
+  {
+    name: 'Bgfetch',
+    title: 'Bgfetch',
+    component: require('../views/bgfetch/index').default,
+    headerShown: true,
+  },
+  {
+    name: 'Storage',
+    title: 'Storage',
+    component: require('../views/Storage').default,
+    headerShown: true,
+  },
   /*  {
     name: 'AliFaceVerify',
     title: 'AliFaceVerify',

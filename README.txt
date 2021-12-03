@@ -30,3 +30,11 @@ https://rn.mobile.ant.design/docs/react/introduce-cn
 https://docs.expo.dev/versions/v43.0.0/sdk/camera
 
 
+#android，编译 react-native-background-fetch 需要手动修改 node_modules/react-native-background-fetch/android/build.gradle文件
+----
+implementation(group: 'com.transistorsoft', name:'tsbackgroundfetch', version: '+')
+----
+这行注释掉，添加下面这行
+implementation files('libs/com/transistorsoft/tsbackgroundfetch/0.5.4/tsbackgroundfetch-0.5.4.aar')
+
+

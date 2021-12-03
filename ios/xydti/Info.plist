@@ -45,6 +45,12 @@
 	<string>Your message to user when the photo library is accessed for the first time</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Your message to user when the photo library is accessed for the first time</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>运行时使用定位服务</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>一直使用定位服务</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>始终使用定位服务</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>antfill.ttf</string>

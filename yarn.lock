@@ -5972,6 +5972,11 @@ react-is@^16.13.0, react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.npmmirror.com/react-is/download/react-is-16.13.1.tgz"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
+react-native-background-fetch@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.npmmirror.com/react-native-background-fetch/download/react-native-background-fetch-4.0.4.tgz#2a7a29bc24ec1e740f9457ccf7108766957d9f24"
+  integrity sha1-KnopvCTsHnQPlFfM9xCHZpV9nyQ=
+
 react-native-camera@4.2.1:
   version "4.2.1"
   resolved "https://registry.npmmirror.com/react-native-camera/download/react-native-camera-4.2.1.tgz#caf74081f055e89d7e9b0cd5108965d808c60e90"
@@ -5993,7 +5998,7 @@ react-native-collapsible@^1.6.0:
   resolved "https://registry.nlark.com/react-native-collapsible/download/react-native-collapsible-1.6.0.tgz#ca261ffff16914f872059bb0972e3a78c4b37f9c"
   integrity sha1-yiYf//FpFPhyBZuwly46eMSzf5w=
 
-react-native-config@^1.4.5:
+react-native-config@1.4.5:
   version "1.4.5"
   resolved "https://registry.npmmirror.com/react-native-config/download/react-native-config-1.4.5.tgz#6fe5895410b75e44fe4f4bf00caaf894a0981f3a"
   integrity sha1-b+WJVBC3XkT+T0vwDKr4lKCYHzo=
@@ -6002,6 +6007,11 @@ react-native-device-info@8.4.8:
   version "8.4.8"
   resolved "https://registry.npmmirror.com/react-native-device-info/download/react-native-device-info-8.4.8.tgz#fc92ae423e47db6cfbf30c30012e09cee63727fa"
   integrity sha512-92676ZWHZHsPM/EW1ulgb2MuVfjYfMWRTWMbLcrCsipkcMaZ9Traz5mpsnCS7KZpsOksnvUinzDIjsct2XGc6Q==
+
+react-native-geolocation-service@5.3.0-beta.3:
+  version "5.3.0-beta.3"
+  resolved "https://registry.npmmirror.com/react-native-geolocation-service/download/react-native-geolocation-service-5.3.0-beta.3.tgz#6afd291e886ecb5fdf8c096ea0a694ccb0975330"
+  integrity sha1-av0pHohuy1/fjAluoKaUzLCXUzA=
 
 react-native-gesture-handler@1.10.3:
   version "1.10.3"
