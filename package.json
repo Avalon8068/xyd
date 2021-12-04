@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "react-native start",
-    "dev:android": "ENVFILE=.env.local react-native run-android --variant=localDebug --appIdSuffix=local",
+    "dev:android": "ENVFILE=.env.local react-native run-android --variant=localDebug",
     "dev:ios": "ENVFILE=.env.local react-native run-ios",
     "dev:start": "react-native start",
     "test": "jest",

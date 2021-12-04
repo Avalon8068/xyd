@@ -8,7 +8,17 @@ export default () => {
   const [mapType, setMapType] = useState(MapType.Standard);
   return (
     <View style={StyleSheet.absoluteFill}>
-      <MapView style={{flex: 1}} mapType={mapType} />
+      <MapView
+        style={{flex: 1}}
+        mapType={mapType}
+        initialCameraPosition={{
+          target: {
+            latitude: 39.91095,
+            longitude: 116.37296,
+          },
+          zoom: 8,
+        }}
+      />
       <Picker style={{backgroundColor: '#fff'}} selectedValue={mapType} onValueChange={setMapType}>
         <Picker.Item label="标准" value={MapType.Standard} />
         <Picker.Item label="卫星" value={MapType.Satellite} />
