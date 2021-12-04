@@ -1,19 +1,10 @@
-/**
- * BackgroundFetch example app.
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
 import React, {useEffect, useState, FC} from 'react';
 import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
-import BackgroundFetch, {BackgroundFetchStatus} from 'common/service/bgfetch';
+import BackgroundFetch from 'common/service/bgfetch';
 
 import {Event} from './types';
 
-import {backgroundColor, loadEvents, persistEvents, statusToString, getTimestamp, styles} from './utils';
+import {backgroundColor, loadEvents, persistEvents, getTimestamp, styles} from './utils';
 
 import {EventItem, Footer, Header, Notice} from './components';
 
@@ -62,6 +53,7 @@ const App: FC<IProps> = (props: IProps) => {
         await BackgroundFetch.stop();
       }
       setEnabled(value);
+      console.warn(`[BackgroundFetch] ${value ? 'start' : 'stop'} success`);
     } catch (e) {
       console.warn(`[BackgroundFetch] ${value ? 'start' : 'stop'} falied`, e);
     }
@@ -112,7 +104,7 @@ const App: FC<IProps> = (props: IProps) => {
   const init = async () => {
     let status = await BackgroundFetch.configure(
       {
-        minimumFetchInterval: 15, // <-- minutes (15 is minimum allowed)
+        minimumFetchInterval: 1, // <-- minutes (15 is minimum allowed)
         // Android options
         forceAlarmManager: false, // <-- Set true to bypass JobScheduler.
         stopOnTerminate: false,

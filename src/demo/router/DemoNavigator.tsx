@@ -1,5 +1,5 @@
 import {Router} from 'types';
-
+import Home from "demo/views/amap3d/home";
 const router: Router[] = [
   {
     name: 'AntForm', //跳转路径
@@ -78,6 +78,12 @@ const router: Router[] = [
     name: 'Storage',
     title: 'Storage',
     component: require('../views/Storage').default,
+    headerShown: true,
+  },
+  {
+    name: 'amap3d',
+    title: '高德地图',
+    component: require('demo/views/amap3d/home').default,
     headerShown: true,
   },
   /*  {

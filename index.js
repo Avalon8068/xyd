@@ -5,7 +5,6 @@
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
-
 import BackgroundFetch from './src/common/service/bgfetch';
 
 import {loadEvents, persistEvents, getTimestamp} from './src/demo/views/bgfetch/utils';
@@ -38,6 +37,5 @@ const headlessTask = async event => {
 };
 
 // Register your BackgroundFetch HeadlessTask
-BackgroundFetch.registerHeadlessTask(headlessTask);
-
+// BackgroundFetch.registerHeadlessTask(headlessTask);
 AppRegistry.registerComponent(appName, () => App);

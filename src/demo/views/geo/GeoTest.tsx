@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text, Dimensions, StyleSheet, Platform} from 'react-native';
+import {View, Text, Dimensions, StyleSheet, Platform, PermissionsAndroid} from 'react-native';
 import {Button, Toast} from '@ant-design/react-native';
-import Geolocation from 'react-native-geolocation-service';
-import axios from 'axios';
+import {Geolocation, setLocatingWithReGeocode, setNeedAddress, init} from 'react-native-amap-geolocation';
 
 class GeoTest extends Component<any, any> {
   constructor(props: any) {
@@ -12,6 +11,25 @@ class GeoTest extends Component<any, any> {
       coords: null,
       address: null,
     };
+  }
+
+  async componentDidMount() {
+    // 使用自己申请的高德 App Key 进行初始化
+    await init({
+      ios: '74cb6e664ddd20104732518c5a326329',
+      android: 'f26161f838bb5a3416969c085f1bb6c0',
+    });
+    if (Platform.OS === 'android') {
+      setNeedAddress(true);
+      // 对于 Android 需要自行根据需要申请权限
+      await PermissionsAndroid.requestMultiple([
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        PermissionsAndroid.PERMISSIONS.ACCESS_COARSE_LOCATION,
+      ]);
+    }
+    if (Platform.OS === 'ios') {
+      setLocatingWithReGeocode(true);
+    }
   }
 
   UNSAFE_componentWillReceiveProps(nextProps: any) {
@@ -38,29 +56,20 @@ class GeoTest extends Component<any, any> {
           this_.setState({
             coords: position.coords,
           });
-          this_.queryLocation(position.coords);
+          if (position.location.address) {
+            this.setState({
+              address: position.location.address,
+            });
+          }
         },
         error => {
           // See error code charts below.
           Toast.fail('未打开定位服务:' + error.message);
+          console.log(error);
         },
         {enableHighAccuracy: true, timeout: 15000, maximumAge: 10000},
       );
     }
-  }
-
-  queryLocation({longitude, latitude}) {
-    const url = `https://restapi.amap.com/v3/geocode/regeo?key=8a330c740ce7997d96bffe83bef562fb&location=${longitude},${latitude}&radius=1000&extensions=base&batch=false&roadlevel=0`;
-    axios.get(url).then(response => {
-      const result = response.data;
-      if (result.infocode === '10000') {
-        if (result.regeocode && result.regeocode.formatted_address) {
-          this.setState({
-            address: result.regeocode.formatted_address,
-          });
-        }
-      }
-    });
   }
 
   async hasLocationPermission() {

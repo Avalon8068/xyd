@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {StackScreenProps} from '@react-navigation/stack';
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {ImageSourcePropType} from 'react-native';
 
 export type Router = {
@@ -14,7 +14,7 @@ export type Router = {
 /**
  * 对Prop进行封装
  */
-export type Props = StackScreenProps<any>;
+export type Props = NativeStackScreenProps<any>;
 
 export type GenericValue = string | object | number | boolean | undefined | null;
 
